@@ -14,11 +14,12 @@ var width = url.searchParams.get("width");
 var bitrate = url.searchParams.get("br");
 var format = url.searchParams.get("format");
 var auto = url.searchParams.get("auto");
-
+var secure = url.searchParams.get("secure");
 var widthparam="";
 var brparam="";
 var formatparam="";
 var autoparam="";
+var secureparam="http://";
 //only allow 6 sizes
 if (width == 1920||width == 1280||width == 960||width == 640||width == 480||width == 320){
 	widthparam = "w_" +width;
@@ -33,8 +34,11 @@ if (format == "webm"|| format == "mp4"|| format == "ogv" || format =="m3u8"){
 if (auto == "auto"){
 	autoparam = "vc_auto";
 }
-var cloudinary_url = "https://res.cloudinary.com/dougsillars/video/upload/"+ widthparam+","+brparam+ ","+formatparam+","+autoparam+"/v1518476665/bbb_38s_s0avek.mp4\""
-var cloudinary_params = "width= " + widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+autoparam
+if (secure == "true"){
+	secureparam="https://";
+}
+var cloudinary_url = secureparam +"res.cloudinary.com/dougsillars/video/upload/"+ widthparam+","+brparam+ ","+formatparam+","+autoparam+"/v1518476665/bbb_38s_s0avek.mp4\""
+var cloudinary_params = "width= " + widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+autoparam +" https= " + secure;	
 
 //write params
 document.getElementById("params").innerHTML= cloudinary_params;
