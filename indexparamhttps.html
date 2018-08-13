@@ -3,6 +3,7 @@
 <head>
 </head>
 <body>
+<div id="params"></div>
 <div id="video">bill</div>
 <script>
 var url_string = window.location.href;
@@ -31,7 +32,7 @@ if (format == "webm"|| format == "mp4"|| format =="ogv" || format ="m3u8"){
 if (auto == "auto"){
 	formatauto = "vc_auto";
 }
-
+document.getElementById("params").innerHTML= "width= " widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+autoparam+"
 document.getElementById("video").innerHTML= "<video width=\"100%\" src=\"https://res.cloudinary.com/dougsillars/video/upload/" 
                         + widthparam+","+brparam+ ","+formatparam+","+autoparam+"/v1518476665/bbb_38s_s0avek.mp4\" autoplay controls muted>";
 console.log(widthparam +brparam);
