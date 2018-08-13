@@ -1,0 +1,32 @@
+<html>
+
+<head>
+</head>
+<body>
+<div id="video">bill</div>
+<script>
+var url_string = window.location.href;
+document.getElementById("video").innerHTML = url_string;
+console.log(url_string);
+var url = new URL(url_string);
+var width = url.searchParams.get("width");
+var bitrate = url.searchParams.get("br");
+var widthparam="";
+var brparam="";
+if (width >0){
+	widthparam = "w_" +width;
+}
+if (bitrate >0){
+	brparam = "br_" +bitrate +"k";
+}
+document.getElementById("video").innerHTML= "<video width=\"100%\" src=\"http://res.cloudinary.com/dougsillars/video/upload/" + widthparam+","+brparam+ "/v1518476665/bbb_38s_s0avek.mp4\" autoplay controls muted>";
+console.log(widthparam +brparam);
+</script>
+
+
+
+
+
+</body>
+
+</html>

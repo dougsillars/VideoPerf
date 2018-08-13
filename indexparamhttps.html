@@ -1,0 +1,46 @@
+<html>
+
+<head>
+</head>
+<body>
+<div id="video">bill</div>
+<script>
+var url_string = window.location.href;
+document.getElementById("video").innerHTML = url_string;
+console.log(url_string);
+var url = new URL(url_string);
+var width = url.searchParams.get("width");
+var bitrate = url.searchParams.get("br");
+var format = url.searchParams.get("format");
+var auto = url.searchParams.get("auto");
+var widthparam="";
+var brparam="";
+var formatparam="";
+var autoparam="";
+//only allow 6 sizes
+if (width == 1920||width == 1280||width == 960||width == 640||width == 480||width == 320){
+	widthparam = "w_" +width;
+}
+//only allow 5 bitrates
+if (bitrate == "10m"||bitrate == "5m"||bitrate == "2m"||bitrate == "1m"||bitrate == "500k"){
+	brparam = "br_" +bitrate;
+}
+if (format == "webm"|| format == "mp4"|| format =="ogv" || format ="m3u8"){
+	formatparam = "f_" +format;
+}
+if (auto == "auto"){
+	formatauto = "vc_auto";
+}
+
+document.getElementById("video").innerHTML= "<video width=\"100%\" src=\"https://res.cloudinary.com/dougsillars/video/upload/" 
+                        + widthparam+","+brparam+ ","+formatparam+","+autoparam+"/v1518476665/bbb_38s_s0avek.mp4\" autoplay controls muted>";
+console.log(widthparam +brparam);
+</script>
+
+
+
+
+
+</body>
+
+</html>
