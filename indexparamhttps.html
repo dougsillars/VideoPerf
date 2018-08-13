@@ -14,6 +14,7 @@ var width = url.searchParams.get("width");
 var bitrate = url.searchParams.get("br");
 var format = url.searchParams.get("format");
 var auto = url.searchParams.get("auto");
+
 var widthparam="";
 var brparam="";
 var formatparam="";
@@ -26,15 +27,19 @@ if (width == 1920||width == 1280||width == 960||width == 640||width == 480||widt
 if (bitrate == "10m"||bitrate == "5m"||bitrate == "2m"||bitrate == "1m"||bitrate == "500k"){
 	brparam = "br_" +bitrate;
 }
-if (format == "webm"|| format == "mp4"|| format =="ogv" || format ="m3u8"){
+if (format == "webm"|| format == "mp4"|| format == "ogv" || format =="m3u8"){
 	formatparam = "f_" +format;
 }
 if (auto == "auto"){
-	formatauto = "vc_auto";
+	autoparam = "vc_auto";
 }
-document.getElementById("params").innerHTML= "width= " widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+autoparam+"
-document.getElementById("video").innerHTML= "<video width=\"100%\" src=\"https://res.cloudinary.com/dougsillars/video/upload/" 
-                        + widthparam+","+brparam+ ","+formatparam+","+autoparam+"/v1518476665/bbb_38s_s0avek.mp4\" autoplay controls muted>";
+var cloudinary_url = "https://res.cloudinary.com/dougsillars/video/upload/"+ widthparam+","+brparam+ ","+formatparam+","+autoparam+"/v1518476665/bbb_38s_s0avek.mp4\""
+var cloudinary_params = "width= " + widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+autoparam
+
+//write params
+document.getElementById("params").innerHTML= cloudinary_params;
+//write video url
+document.getElementById("video").innerHTML= "<video width=\"100%\" src=\"" +cloudinary_url+"\" autoplay controls muted>";
 console.log(widthparam +brparam);
 </script>
 
