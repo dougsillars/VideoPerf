@@ -18,7 +18,7 @@ var secure = url.searchParams.get("secure");
 var widthparam="";
 var brparam="";
 var formatparam="";
-var autoparam="";
+var codecparam="";
 var secureparam="http://";
 //only allow 6 sizes
 if (width == 1920||width == 1280||width == 960||width == 640||width == 480||width == 320){
@@ -31,8 +31,8 @@ if (bitrate == "10m"||bitrate == "5m"||bitrate == "2m"||bitrate == "1m"||bitrate
 if (format == "webm"|| format == "mp4"|| format == "ogv" || format =="m3u8"){
 	formatparam = "f_" +format;
 }
-if (auto == "auto"){
-	autoparam = "vc_auto";
+if (codec != null){
+	codecparam = "vc_" +codec;
 }
 if (secure == "true"){
 	secureparam="https://";
@@ -41,14 +41,13 @@ if (secure == "true"){
 //30 4b Big Buck Bunny on Cloudinary is found here:
 //http://res.cloudinary.com/dougsillars/video/upload/v1534228645/30s4kbbb_oblsgc.mp4
 
-var cloudinary_url = secureparam +"res.cloudinary.com/dougsillars/video/upload/"+ widthparam+","+brparam+ ","+formatparam+","+autoparam+"/v1534228645/30s4kbbb_oblsgc.mp4"
-var cloudinary_params = "width= " + widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+autoparam +" https= " + secure;	
+var cloudinary_url = secureparam +"res.cloudinary.com/dougsillars/video/upload/"+ widthparam+","+brparam+ ","+formatparam+","+codecparam+"/v1534228645/30s4kbbb_oblsgc.mp4"
+var cloudinary_params = "width= " + widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+codecparam +" https= " + secure;	
 
 //write params
 document.getElementById("params").innerHTML= cloudinary_params + "<p>"+ cloudinary_url;
 //write video url
 document.getElementById("video").innerHTML= "<video width=\"100%\" src=\"" +cloudinary_url+"\" autoplay controls muted>";
-console.log(widthparam +brparam);
 </script>
 
 
