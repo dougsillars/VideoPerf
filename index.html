@@ -13,7 +13,7 @@ var url = new URL(url_string);
 var width = url.searchParams.get("width");
 var bitrate = url.searchParams.get("br");
 var format = url.searchParams.get("format");
-var auto = url.searchParams.get("auto");
+var codec = url.searchParams.get("codec");
 var secure = url.searchParams.get("secure");
 var widthparam="";
 var brparam="";
@@ -48,7 +48,7 @@ if (secure == "true"){
 //http://res.cloudinary.com/dougsillars/video/upload/v1534228645/30s4kbbb_oblsgc.mp4
 
 var cloudinary_url = secureparam +"res.cloudinary.com/dougsillars/video/upload/"+ widthparam+","+brparam+ ","+formatparam+","+codecparam+"/v1534228645/30s4kbbb_oblsgc.mp4"
-var cloudinary_params = "width= " + widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" auto= "+codecparam +" https= " + secure;	
+var cloudinary_params = "width= " + widthparam+ " bitrate= "+brparam+ " format= "+formatparam+" codec= "+codecparam +" https= " + secure;	
 
 //write params
 document.getElementById("params").innerHTML= cloudinary_params + "<p>"+ cloudinary_url;
