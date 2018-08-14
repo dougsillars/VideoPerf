@@ -33,6 +33,12 @@ if (format == "webm"|| format == "mp4"|| format == "ogv" || format =="m3u8"){
 }
 if (codec != null){
 	codecparam = "vc_" +codec;
+}else{
+	//no codec supplied
+	//video uses h264:high
+	//if you resize a video with Cloudinary - it uses vc_auto by default
+	//force video to remain at high resolution, unless we change explicitly
+	codecparam = "vc_264:high";
 }
 if (secure == "true"){
 	secureparam="https://";
