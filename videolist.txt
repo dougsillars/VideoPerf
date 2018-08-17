@@ -1,0 +1,13 @@
+http://res.cloudinary.com/dougsillars/video/upload/,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/,,,vc_h264:main/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/,,,vc_h264:baseline/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/br_10m,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/br_5m,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/br_2m,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/br_1m,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/br_500k,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/w_1920,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/w_1280,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/w_960,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/w_640,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
+http://res.cloudinary.com/dougsillars/video/upload/w_320,,,vc_h264:high/v1534228645/30s4kbbb_oblsgc.mp4
