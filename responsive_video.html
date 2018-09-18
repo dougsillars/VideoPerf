@@ -4,8 +4,8 @@
 <script>
 	//get screen width and pixel ratio
 	var width = screen.availWidth;
-	var width2 = window.screen.availWidth;
 	var dpr = window.devicePixelRatio;
+	width = width*dpr;
 	
 	var smallVideo="http://res.cloudinary.com/dougsillars/video/upload/w_960/v1534228645/30s4kbbb_oblsgc.mp4";
 	var bigVideo = "http://res.cloudinary.com/dougsillars/video/upload/w_1920/v1534228645/30s4kbbb_oblsgc.mp4";
@@ -15,7 +15,7 @@
 		console.log("this is a very small screen");
 		}
 		
-	else if (width< 1400){
+	else if (width< 1600){
 			console.log("let's call this mobile sized");
 			var videoTag = "\<video preload=\"auto\" width=\"100%\" autoplay muted controls src=\"" +smallVideo +"\"/\>";
 			console.log(videoTag);
