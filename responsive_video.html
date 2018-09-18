@@ -1,10 +1,10 @@
 <html><body>
 <div id="video"> </div>
+<div id="text"></div>
 <script>
 	//get screen width and pixel ratio
 	var width = screen.width;
 	var dpr = window.devicePixelRatio;
-	console.log(width + " " + dpr);
 	var smallVideo="http://res.cloudinary.com/dougsillars/video/upload/w_960/v1534228645/30s4kbbb_oblsgc.mp4";
 	var bigVideo = "http://res.cloudinary.com/dougsillars/video/upload/w_1920/v1534228645/30s4kbbb_oblsgc.mp4";
 	//perhaps have logic on adding retina videos	
@@ -14,13 +14,16 @@
 		
 	else if (width< 1400){
 			console.log("let's call this mobile sized");
-			var videoTag = "\<video preload=\"auto\" autoplay muted controls src=\"" +smallVideo +"\"/\>"
+			var videoTag = "\<video preload=\"auto\" width=\"100%\" autoplay muted controls src=\"" +smallVideo +"\"/\>";
+			console.log(videoTag);
 			document.getElementById('video').innerHTML = videoTag;
+			document.getElementById('text').innerHTML = "This is a small video.";
 			}
 	else{
 			videoUrl="big.mp4";
-			var videoTag = "\<video preload=\"auto\" autoplay muted controls src=\"" +bigVideo +"\"/\>"
+			var videoTag = "\<video preload=\"auto\" width=\"100%\" autoplay muted controls src=\"" +bigVideo +"\"/\><br/>This is a big video.";
 			document.getElementById('video').innerHTML = videoTag;
+			document.getElementById('text').innerHTML = "This is a big video.";
 			
 	}
 	
