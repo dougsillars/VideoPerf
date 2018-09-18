@@ -3,13 +3,14 @@
 <div id="text"></div>
 <script>
 	//get screen width and pixel ratio
-	var width = screen.width;
+	var width = screen.Width;
 	var dpr = window.devicePixelRatio;
+	//width = width*dpr
 	var smallVideo="http://res.cloudinary.com/dougsillars/video/upload/w_960/v1534228645/30s4kbbb_oblsgc.mp4";
 	var bigVideo = "http://res.cloudinary.com/dougsillars/video/upload/w_1920/v1534228645/30s4kbbb_oblsgc.mp4";
 	//perhaps have logic on adding retina videos	
 	if (width<500){
-         document.getElementById('text').innerHTML =width;
+         document.getElementById('text').innerHTML =width + screen.availWidth;
 		console.log("this is a very small screen");
 		}
 		
