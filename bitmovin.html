@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bitmovin Player full customized example</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Bitmovin Player -->
+  <script type="text/javascript" src="https://cdn.bitmovin.com/player/web/8.0.1/bitmovinplayer.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+<div id="my-player"></div>
+
+<script type="text/javascript">
+  var config =   {
+    "key": "65917089-1905-4620-8ef9-ef23692bfa7c"
+  };
+  var configWithAnalytics = Object.assign({}, config, {
+    analytics: {
+      key: 'e1b5d71c-78f9-4b5c-95ae-61f22f5bb167',
+      videoId: 'VIDEO_ID'
+    }
+  });
+  var source = {
+    title: 'Doug Sample Player',
+    description: 'My encoded video',
+    
+    dash: '//s3.eu-west-2.amazonaws.com/bitmovin-doug-public/testpertitle/stream.mpd',
+    
+  };
+  var container = document.getElementById('my-player');
+  var player = new bitmovin.player.Player(container, configWithAnalytics);
+
+  player.load(source).then(
+  function(player) {
+      //Success
+      console.log('Successfully created Bitmovin Player instance');
+    },
+  function(reason) {
+      //Error
+      console.log('Error while creating Bitmovin Player instance');
+    }
+  );
+
+</script>
+</body>
+</html>
