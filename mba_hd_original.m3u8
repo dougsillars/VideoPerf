@@ -1,0 +1,12 @@
+#EXTM3U
+#EXT-X-STREAM-INF:BANDWIDTH=1566000,CODECS="avc1.4D401F,mp4a.40.2",RESOLUTION=1280x720
+https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_1280,h_720,vc_h264:main:3.1,br_5500k/v1543082006/Campus_mfkz6z.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=972000,CODECS="avc1.4D401F,mp4a.40.2",RESOLUTION=960x540
+https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_960,h_540,vc_h264:main:3.1,br_3500k/v1543082006/Campus_mfkz6z.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1670000,CODECS="avc1.42C01E,mp4a.40.2",RESOLUTION=640x360
+https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_640,h_360,vc_h264:baseline:3.0,br_2m/v1543082006/Campus_mfkz6z.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=1021000,CODECS="avc1.42C01E,mp4a.40.2",RESOLUTION=480x270
+https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_480,h_270,vc_h264:baseline:3.0,br_800k/v1543082006/Campus_mfkz6z.m3u8
+#EXT-X-STREAM-INF:BANDWIDTH=341000,CODECS="avc1.42C01E,mp4a.40.2",RESOLUTION=320x180
+https://res.cloudinary.com/dougsillars/video/upload/c_limit,w_320,h_240,vc_h264:baseline:3.0,br_192k/v1543082006/Campus_mfkz6z.m3u8
+
